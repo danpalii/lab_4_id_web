@@ -15,6 +15,23 @@ from .models import Event, User
 #     queryset = Event.objects.all()
 #     serializer_class = EventSerializer
 
+def sum_two_numbers(x, y):
+    sum = x + y
+    return sum
+
+def differ_two_numbers(x, y):
+    differ = x - y
+    return differ
+
+def multiple_two_numbers(x, y):
+    multiple = x * y
+    return multiple
+
+def division_two_numbers(x, y):
+    division = x / y
+    return division
+
+
 def index(request):
     return render(request, 'api/index.html')
 
