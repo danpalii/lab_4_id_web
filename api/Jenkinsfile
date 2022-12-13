@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Installing packages') {
+                steps {
+                    script {
+                        sh 'pip -r requirements.txt'
+                    }
+                }
+            }    
+        
+        
+        stage('Running Unit tests') {
+                steps {
+                    script {
+                        sh 'python manage.py test'
+                    }
+                }
+            }
+        
+    }
+}
