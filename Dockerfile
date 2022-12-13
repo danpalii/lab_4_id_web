@@ -2,7 +2,7 @@ FROM python:3
 
 EXPOSE 8000
 
-WORKDIR /Lab_3_ID_Web/Lab3idweb/testsuperapi
+WORKDIR /Lab_4_ID_Web/testsuperapi
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
