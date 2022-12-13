@@ -4,18 +4,14 @@ pipeline {
     stages {
         stage('Installing packages') {
                 steps {
-                    script {
-                        sh 'pip -r requirements.txt'
-                    }
+                    sh 'pip -r requirements.txt'
                 }
             }    
         
         
         stage('Running Unit tests') {
                 steps {
-                    script {
-                        sh 'python manage.py test'
-                    }
+                    sh 'python manage.py test'
                 }
             }
         
