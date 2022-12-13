@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('version') {
       steps {
-        sh 'python3 --version'
+        bat 'python3 --version'
       }
     }
     stage('Install_packages') {
       steps {
-        sh 'pip -r requirements.txt'
+        bat 'pip -r requirements.txt'
       }
     }
     stage('Tests') {
       steps {
-        sh 'python manage.py test'
+        bat 'python manage.py test'
       }
     }
   }
