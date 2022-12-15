@@ -12,16 +12,17 @@ pipeline {
             	    }
       	      }
 	        }
-		stage('Build') {
-			steps {
-				bat 'docker build -t danpalii/lab4.10 .'
-			}
-		}
 		stage('Login') {
 			steps {
 				bat 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 			}
 		}
+		stage('Build') {
+			steps {
+				bat 'docker build -t danpalii/lab4.10 .'
+			}
+		}
+		
 		stage('Push') {
 			steps {
 				bat 'docker push danpalii/lab4.10'
