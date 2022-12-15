@@ -6,7 +6,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh 'docker build -t danpalii/lab4:latest .'
+				sh 'docker build -t danpalii/lab4.10:latest .'
 			}
 		}
 		stage('Login') {
@@ -16,7 +16,7 @@ pipeline {
 		}
 		stage('Push') {
 			steps {
-				sh 'docker push danpalii/lab4:latest'
+				sh 'docker push danpalii/lab4.10:latest'
 			}
 		}
 	}
