@@ -4,6 +4,14 @@ pipeline {
 		DOCKERHUB_CREDENTIALS=credentials('danpalii-dockerhub')
 	}
 	stages {
+		stage('Checkout project') {
+            	steps {
+      	          script {
+	                    git branch: "master",
+                  	      url: 'https://github.com/danpalii/lab_4_id_web.git'
+            	    }
+      	      }
+	        }
 		stage('Build') {
 			steps {
 				bat 'docker build -t danpalii/lab4.10 .'
